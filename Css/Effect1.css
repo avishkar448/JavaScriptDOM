@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: antiquewhite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  height: 400px;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#container::-webkit-scrollbar {
+  display: none;
+}
+
+#card {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid black;
+  overflow: hidden;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+  
+}
+
+#card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  transition: all 1;
+}
+
+#card h1 {
+  font-weight: 800;
+  text-align: center;
+}
+
+#info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 1s;
+  transform: translateX(-100%);
+  background: rgb(23,23,23);
+  color: #fff;
+  flex-direction: column;
+  
+}
+
+
+
+#card:hover #info{
+  transform: translateX(0);
+}
+

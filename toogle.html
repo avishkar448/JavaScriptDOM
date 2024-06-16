@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        font-family: "Gilroy-black";
+    }
+
+    :root {
+        --primary-color: white;
+        --secondory-color: black;
+    }
+    .darkmode{
+        --primary-color: black;
+        --secondory-color: white;
+    }
+    body {
+        background-color: var(--primary-color);
+        color: var(--secondory-color);
+    }
+    .cont{
+        text-align: center;
+        
+    }
+    img{ 
+    filter: invert(1);
+}
+</style>
+
+<body>
+    <div class="cont">
+        <img width="300px" src="Images/dark.png" alt="" id="demo">
+        <h1>Hii!! My Name is Avishkar</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi quidem voluptates voluptate doloremque
+            perferendis beatae facere, illo mollitia sed, omnis nam iste repellendus ipsam. Assumenda quasi et eos
+            cumque culpa.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam tempora officia natus, vitae quo repudiandae
+            sed totam alias voluptatem sit dolores iste velit similique eveniet iusto voluptate obcaecati illum sapiente
+            eligendi, eaque aperiam delectus aut, perspiciatis maxime! Rem explicabo soluta aut, perferendis eligendi
+            tenetur quos quis, vero magni dignissimos ullam! Quos, sit accusantium ab blanditiis nesciunt ducimus modi,
+            similique nisi animi laudantium itaque quaerat cupiditate distinctio quae fuga! Quibusdam aspernatur quo
+            eveniet veritatis. Blanditiis, impedit?</p>
+    </div>
+
+</body>
+
+<script>
+var x=document.getElementById("demo");
+x.addEventListener("click",()=>{
+    document.body.classList.toggle("darkmode");
+    if(document.body.classList.contains("darkmode")){
+        console.log(x.src)
+        x.src="Images/light.png"
+    }
+    else{
+        x.src="Images/dark.png"
+    }
+})
+</script>
+
+</html>
